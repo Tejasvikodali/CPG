@@ -15,6 +15,7 @@ module.exports = async function (req, res, next) {
 
   try {
     const decoded = jwt.verify(token, process.env.jwtPrivateKey);
+    //const decoded = jwt.verify(dectoken, process.env.jwtPrivateKey);
     console.log("decoded----->", decoded);
     // get the user from Redis based on the decoded user ID
 
